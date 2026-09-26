@@ -1,0 +1,40 @@
+{
+ "version": "v14-final (rev 2: cross-seed stability criterion, perfusion paired numbers corrected)",
+ "python": "3.11.15",
+ "numpy": "2.4.4",
+ "matplotlib": "3.10.9",
+ "settings": {
+  "DT": 2.0,
+  "T_CR0": 36.9,
+  "noise_white_sd": 0.3,
+  "tol_rejection": 1.5,
+  "ess_min": 20,
+  "sensor_model": {
+   "SIG_E": 0.3,
+   "SIG_B": 0.5,
+   "TAU_s": 60
+  },
+  "stability_effect_scale": 0.02
+ },
+ "sha256": {
+  "README.md": "82a00fc3fcbf4d94806b5948320b86e6b8839f4a63a315ee9b6fe4ca574e3310",
+  "out/ambiguity_results.json": "6e2308fda0fd044738da967e4c456d729665cb7340dd396d474178d2be7566bb",
+  "out/calibrated_results.json": "eeeb48313d45af94c6a7217a9d1c3f807c78881b94819f9f4b3648def9b03445",
+  "out/fig1_forward.png": "79ca3954ec5c16db12e25928f163bc13fef3b4893aa8f98709eb57956ec2fa32",
+  "out/fig2_tornado.png": "ab2f3902c253cda0b53cdcb23e24b4ddea664af3deab5b589ab7b2cffe1de42a",
+  "out/fig3_ensembles.png": "f0bea8ebf7a4b4d30d0ecfc6fabebbcf712d9e61055dd521db77b9c179b2e126",
+  "out/fig4_accuracy_sweep.png": "3a10339ca7d8da2aa0491f1ddf6a2cdecf2ef9b5542003db8c240aa335109535",
+  "out/fig5_misspecified.png": "ca7b4013fe10bc6befd5687e546087765848f394ec605e6271298f961c0b0c35",
+  "out/fig6_ambiguity.png": "bf11cbece76d9916e5e694fcb73478dbe250e13683ebe7d6908a52bc47863b82",
+  "out/fig7_mechanism.png": "93c2a9dcf9975ed41eb535b04e4f83187700790a6f29b0e3086638499ec9ea99",
+  "out/fig8_decomposition.png": "b84ce3a3d0f01634e678dd778a8db1e3ce7e43d02336876e52df35d2a7323be8",
+  "out/fig9_calibrated.png": "543aac1cb885d93d8753fc4a54c4954416506a0853da0e3aed4b3bb094c938c7",
+  "out/mechanism_results.json": "9eb8d23e78441ed05153641684c81ae0fbf34dd587b69efabf13eab68d7bb697",
+  "out/summary.json": "dea8e6081f0f41b76cc7e929bd600c2d5b643b663dc435a25093c30d6b496466",
+  "run_ambiguity.py": "0513ca0139482519f6b40dd06f8ce72709ed5398653d0f54c1003ebb7c63172c",
+  "run_analysis.py": "61133fcafda49df0d91fe3df71ad7d7791c6ee06e72c78946511626ba0865717",
+  "run_calibrated.py": "a9389d7e22d01944736ba670a8f0110ff0622029bc6afb16af8749b4c13f5332",
+  "run_mechanism.py": "5fecc5835134350f543d14f80e7a89664cd811a77ba5fdc91f20e1ff8e987702",
+  "thermo.py": "07b2601eec10de426c4ac591ca7dbeaf4a0fce1fa4af9d867e9fb8ab22b8a9d4"
+ }
+}

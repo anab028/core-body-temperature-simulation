@@ -1,0 +1,72 @@
+external work kJ: {'standard': 180.0, 'fan_only': 180.0, 'work_only': 180.0, 'combined': 180.0}
+key                                        avail  insuf  none  outside  cover  |med|    med  width
+reference|standard|noE                      20.0    0.0   0.0      0.0   1.00  0.054 -0.013  0.322
+reference|standard|+totalE                  20.0    0.0   0.0      0.0   1.00  0.057 -0.002  0.308
+perfusion_only|standard|noE                 18.0    2.0   0.0      3.3   0.81  0.149 -0.149  0.310
+perfusion_only|standard|+totalE             18.0    2.0   0.0      6.0   0.67  0.154 -0.154  0.294
+sweat_only|standard|noE                     11.3    4.3   4.3      3.7   0.67  0.071  0.057  0.215
+sweat_only|standard|+totalE                 10.7    5.0   4.3      4.0   0.61  0.075  0.057  0.213
+reference|fan_only|noE                      20.0    0.0   0.0      0.3   0.98  0.053 -0.014  0.312
+reference|fan_only|+totalE                  20.0    0.0   0.0      0.0   1.00  0.062 -0.006  0.311
+perfusion_only|fan_only|noE                 17.7    2.0   0.3      6.0   0.66  0.154 -0.154  0.310
+perfusion_only|fan_only|+totalE             17.7    2.0   0.3      6.7   0.62  0.159 -0.159  0.300
+sweat_only|fan_only|noE                      9.0    4.7   6.3      1.7   0.79  0.066  0.051  0.181
+sweat_only|fan_only|+totalE                  8.0    5.3   6.7      1.7   0.76  0.066  0.048  0.173
+reference|work_only|noE                     20.0    0.0   0.0      0.0   1.00  0.053 -0.013  0.315
+reference|work_only|+totalE                 20.0    0.0   0.0      0.0   1.00  0.056 -0.001  0.300
+perfusion_only|work_only|noE                18.0    2.0   0.0      3.7   0.80  0.143 -0.143  0.305
+perfusion_only|work_only|+totalE            18.0    2.0   0.0      6.0   0.67  0.148 -0.148  0.287
+sweat_only|work_only|noE                    11.3    5.0   3.7      0.3   0.97  0.046  0.022  0.228
+sweat_only|work_only|+totalE                11.3    5.0   3.7      1.0   0.92  0.048  0.022  0.223
+reference|combined|noE                      20.0    0.0   0.0      0.3   0.98  0.052 -0.013  0.301
+reference|combined|+totalE                  20.0    0.0   0.0      0.0   1.00  0.061 -0.005  0.298
+perfusion_only|combined|noE                 17.7    2.0   0.3      5.7   0.68  0.147 -0.147  0.297
+perfusion_only|combined|+totalE             17.7    2.0   0.3      5.7   0.68  0.152 -0.152  0.289
+sweat_only|combined|noE                     10.3    4.0   5.7      0.3   0.95  0.037  0.016  0.164
+sweat_only|combined|+totalE                 10.0    4.0   6.0      0.7   0.92  0.039  0.017  0.161
+
+PAIRED delta (truth-outside per 20) vs standard, per seed:
+  reference|fan_only-standard|noE          [1, 0, 0]  mean +0.33
+  reference|work_only-standard|noE         [0, 0, 0]  mean +0.00
+  reference|combined-standard|noE          [1, 0, 0]  mean +0.33
+  reference|fan_only-standard|+totalE      [0, 0, 0]  mean +0.00
+  reference|work_only-standard|+totalE     [0, 0, 0]  mean +0.00
+  reference|combined-standard|+totalE      [0, 0, 0]  mean +0.00
+  perfusion_only|fan_only-standard|noE     [2, 4, 2]  mean +2.67
+  perfusion_only|work_only-standard|noE    [2, 0, -1]  mean +0.33
+  perfusion_only|combined-standard|noE     [2, 4, 1]  mean +2.33
+  perfusion_only|fan_only-standard|+totalE [0, 0, 2]  mean +0.67
+  perfusion_only|work_only-standard|+totalE [1, 0, -1]  mean +0.00
+  perfusion_only|combined-standard|+totalE [1, -1, -1]  mean -0.33
+  sweat_only|fan_only-standard|noE         [-1, -2, -3]  mean -2.00
+  sweat_only|work_only-standard|noE        [-3, -2, -5]  mean -3.33
+  sweat_only|combined-standard|noE         [-2, -2, -6]  mean -3.33
+  sweat_only|fan_only-standard|+totalE     [-2, -2, -3]  mean -2.33
+  sweat_only|work_only-standard|+totalE    [-4, -1, -4]  mean -3.00
+  sweat_only|combined-standard|+totalE     [-3, -1, -6]  mean -3.33
+
+ROBUSTNESS (participants/noise fixed): delta truth-outside vs standard | delta |med err| | n_available [arm, standard]
+  perfusion_only|fan_only-standard|bank1000|tol1.25    +0  +0.013  [1, 3]
+  perfusion_only|fan_only-standard|bank1000|tol1.5     +0  +0.004  [12, 11]
+  perfusion_only|fan_only-standard|bank1000|tol2.0     +0  +0.009  [17, 17]
+  perfusion_only|fan_only-standard|bank4000|tol1.25    -1  -0.016  [7, 10]
+  perfusion_only|fan_only-standard|bank4000|tol1.5     +1  +0.005  [17, 17]
+  perfusion_only|fan_only-standard|bank4000|tol2.0     +0  +0.011  [20, 20]
+  perfusion_only|fan_only-standard|bank8000|tol1.25    -1  +0.009  [10, 12]
+  perfusion_only|fan_only-standard|bank8000|tol1.5     +0  +0.007  [17, 19]
+  perfusion_only|fan_only-standard|bank8000|tol2.0     +0  +0.010  [20, 20]
+  sweat_only|work_only-standard|bank1000|tol1.25       +0    [0, 0]
+  sweat_only|work_only-standard|bank1000|tol1.5        -2  -0.020  [5, 6]
+  sweat_only|work_only-standard|bank1000|tol2.0        -1  -0.018  [16, 16]
+  sweat_only|work_only-standard|bank4000|tol1.25       -1  -0.008  [2, 2]
+  sweat_only|work_only-standard|bank4000|tol1.5        -4  -0.032  [8, 8]
+  sweat_only|work_only-standard|bank4000|tol2.0        -2  -0.015  [17, 17]
+  sweat_only|work_only-standard|bank8000|tol1.25       -2  -0.020  [3, 4]
+  sweat_only|work_only-standard|bank8000|tol1.5        -4  -0.030  [11, 11]
+  sweat_only|work_only-standard|bank8000|tol2.0        -2  -0.016  [17, 17]
+
+MECHANISM (seed 1): accepted gain p10/p50/p90 vs participant true gains; core-skin gap
+  perfusion_only|standard      n_acc=130 sweat [0.6234633098685349, 1.0421201918924181, 1.6065642064414367] bloodflow [0.5616436384663389, 0.7458626320318895, 0.9686971387687361] | truth sweat [0.7174786138474275, 1.0741911561797886, 1.4349318609068153] bloodflow [0.5613420146136995, 0.9538201056460918, 1.2650063539696024] | gap acc 2.2754227721560456 truth 2.3540758116584812
+  perfusion_only|fan_only      n_acc=121 sweat [0.6520842538848312, 1.0891705743630054, 1.5807620962489461] bloodflow [0.5706177881695008, 0.7556494477927688, 0.9651934882548472] | truth sweat [0.7174786138474275, 1.0741911561797886, 1.4349318609068153] bloodflow [0.5613420146136995, 0.9538201056460918, 1.2650063539696024] | gap acc 2.2630055846474355 truth 2.379293336095579
+  sweat_only|standard          n_acc=63 sweat [1.188286629480499, 1.5676298055666373, 1.9979488851686231] bloodflow [0.8591450743735447, 1.256680453900583, 1.7147248446643188] | truth sweat [0.7174786138474275, 1.0741911561797886, 1.4349318609068153] bloodflow [0.5613420146136995, 0.9538201056460918, 1.2650063539696024] | gap acc 2.1646961964410667 truth 2.245936153494077
+  sweat_only|work_only         n_acc=62 sweat [1.1575407549495593, 1.4994872033866247, 2.0046252466447245] bloodflow [0.8322057226885188, 1.2352115839630011, 1.6926687638267797] | truth sweat [0.7174786138474275, 1.0741911561797886, 1.4349318609068153] bloodflow [0.5613420146136995, 0.9538201056460918, 1.2650063539696024] | gap acc 2.213174842378938 truth 2.3139258337505457

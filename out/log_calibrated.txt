@@ -1,0 +1,104 @@
+case                                 n_av      cov_av k/n (Wilson)  cov_all k/n  |err|  width  medESS
+standard|full                          38        36/38 [0.83,0.99]     37/40     0.067  0.318   245.6
+standard|white                          0                      N/A      0/40      N/A    N/A      1.0
+work_only|full                         38        36/38 [0.83,0.99]     37/40     0.064  0.319   247.5
+work_only|white                         0                      N/A      0/40      N/A    N/A      1.0
+sweat_only|standard|full                8          3/8 [0.14,0.69]      7/20     0.119  0.222    13.2
+sweat_only|standard|white               0                      N/A      0/20      N/A    N/A      1.0
+sweat_only|work_only|full               9          6/9 [0.35,0.88]      9/20     0.092  0.228    17.3
+sweat_only|work_only|white              0                      N/A      0/20      N/A    N/A      1.0
+perfusion_only|standard|full           13        12/13 [0.67,0.99]     14/20     0.086  0.276    28.2
+perfusion_only|standard|white           0                      N/A      1/20      N/A    N/A      1.0
+perfusion_only|work_only|full          11        11/11 [0.74,1.00]     17/20     0.082  0.296    26.9
+perfusion_only|work_only|white          0                      N/A      0/20      N/A    N/A      1.0
+
+PAIRED (mismatch): {
+ "sweat_only|work_only-standard|full": {
+  "n_common": 8,
+  "n_improved": 7,
+  "n_worsened": 1,
+  "mean_delta_abs_error": -0.023880891360361645,
+  "coverage_common": {
+   "work_only": "5/8",
+   "standard": "3/8",
+   "uncovered_to_covered": 2,
+   "covered_to_uncovered": 0
+  },
+  "availability": {
+   "work_only": 9,
+   "standard": 8,
+   "available_to_unavailable": 0,
+   "unavailable_to_available": 1
+  }
+ },
+ "sweat_only|work_only-standard|white": {
+  "n_common": 0,
+  "n_improved": 0,
+  "n_worsened": 0,
+  "mean_delta_abs_error": null,
+  "coverage_common": {
+   "work_only": "0/0",
+   "standard": "0/0",
+   "uncovered_to_covered": 0,
+   "covered_to_uncovered": 0
+  },
+  "availability": {
+   "work_only": 0,
+   "standard": 0,
+   "available_to_unavailable": 0,
+   "unavailable_to_available": 0
+  }
+ },
+ "perfusion_only|work_only-standard|full": {
+  "n_common": 11,
+  "n_improved": 7,
+  "n_worsened": 4,
+  "mean_delta_abs_error": -0.004527216301375022,
+  "coverage_common": {
+   "work_only": "11/11",
+   "standard": "10/11",
+   "uncovered_to_covered": 1,
+   "covered_to_uncovered": 0
+  },
+  "availability": {
+   "work_only": 11,
+   "standard": 13,
+   "available_to_unavailable": 2,
+   "unavailable_to_available": 0
+  }
+ },
+ "perfusion_only|work_only-standard|white": {
+  "n_common": 0,
+  "n_improved": 0,
+  "n_worsened": 0,
+  "mean_delta_abs_error": null,
+  "coverage_common": {
+   "work_only": "0/0",
+   "standard": "0/0",
+   "uncovered_to_covered": 0,
+   "covered_to_uncovered": 0
+  },
+  "availability": {
+   "work_only": 0,
+   "standard": 0,
+   "available_to_unavailable": 0,
+   "unavailable_to_available": 0
+  }
+ }
+}
+
+STABILITY:
+  reference|high_ESS|standard|p19          PASS                     med A4k/8k/16k +0.618/+0.616/+0.616  B16k +0.621 | ESS A 545/1083/2162 | seed spread med 0.005 lo 0.005 hi 0.005
+  reference|high_ESS|work_only|p19         PASS                     med A4k/8k/16k +0.676/+0.672/+0.672  B16k +0.676 | ESS A 697/1390/2751 | seed spread med 0.005 lo 0.003 hi 0.005
+  reference|low_ESS|standard|p6            numerically unresolved   med A4k/8k/16k +0.830/+0.830/+0.894  B16k +0.941 | ESS A 4/6/9 | seed spread med 0.047 lo 0.050 hi 0.063
+  reference|low_ESS|work_only|p6           numerically unresolved   med A4k/8k/16k +0.843/+0.903/+0.904  B16k +0.954 | ESS A 4/6/9 | seed spread med 0.050 lo 0.069 hi 0.015
+  sweat_only|high_ESS|standard|p4          numerically unresolved   med A4k/8k/16k +0.526/+0.530/+0.528  B16k +0.531 | ESS A 126/241/462 | seed spread med 0.003 lo 0.008 hi 0.011
+  sweat_only|high_ESS|work_only|p4         PASS                     med A4k/8k/16k +0.548/+0.552/+0.550  B16k +0.552 | ESS A 116/235/445 | seed spread med 0.002 lo 0.004 hi 0.006
+  sweat_only|low_ESS|standard|p13          numerically unresolved   med A4k/8k/16k +0.250/+0.250/+0.250  B16k +0.222 | ESS A 2/2/4 | seed spread med 0.028 lo 0.022 hi 0.017
+  sweat_only|low_ESS|work_only|p13         numerically unresolved   med A4k/8k/16k +0.277/+0.277/+0.253  B16k +0.299 | ESS A 3/4/6 | seed spread med 0.046 lo 0.009 hi 0.015
+  perfusion_only|high_ESS|standard|p0      PASS                     med A4k/8k/16k +0.448/+0.443/+0.444  B16k +0.438 | ESS A 281/557/1088 | seed spread med 0.007 lo 0.002 hi 0.002
+  perfusion_only|high_ESS|work_only|p0     PASS                     med A4k/8k/16k +0.518/+0.520/+0.524  B16k +0.516 | ESS A 193/378/751 | seed spread med 0.008 lo 0.003 hi 0.005
+  perfusion_only|low_ESS|standard|p1       numerically unresolved   med A4k/8k/16k +0.846/+0.846/+0.773  B16k +0.669 | ESS A 2/2/5 | seed spread med 0.104 lo 0.058 hi 0.098
+  perfusion_only|low_ESS|work_only|p1      numerically unresolved   med A4k/8k/16k +0.865/+0.865/+0.791  B16k +0.692 | ESS A 2/2/5 | seed spread med 0.099 lo 0.058 hi 0.115
+  sweat_only paired benefit, bank 4000: {"n_common": 8, "n_improved": 7, "n_worsened": 1, "mean_delta_abs_error": -0.023880891360361645, "coverage_common": {"work_only": "5/8", "standard": "3/8", "uncovered_to_covered": 2, "covered_to_uncovered": 0}, "availability": {"work_only": 9, "standard": 8, "available_to_unavailable": 0, "unavailable_to_available": 1}}
+  sweat_only paired benefit, bank 16000: {"n_common": 14, "n_improved": 12, "n_worsened": 2, "mean_delta_abs_error": -0.023664829570782735, "coverage_common": {"work_only": "8/14", "standard": "6/14", "uncovered_to_covered": 2, "covered_to_uncovered": 0}, "availability": {"work_only": 15, "standard": 14, "available_to_unavailable": 0, "unavailable_to_available": 1}}
